@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHEMISTRY FOR 7&8TH GRADERS</title>
+   </title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f4f9; }
+       
+    
+    .top-nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+    }
+    .tab {
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: #666;
+      padding-bottom: 6px;
+    }
+    .tab.active {
+      color: #0077cc;
+      font-weight: bold;
+      border-bottom: 3px solid #0077cc;
+    }
+     .page {display : none ; min-height: 100vh ; padding-bottom: 0px}
+    .page { display: none; padding: 20px; min-height: 100vh; }
+    .page.active { display: block; }
+
+    /* Question page */
+    .question-box {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    #question { background: #eef6fc; padding: 15px; border-left: 4px solid #0077cc; margin-bottom: 15px; }
+    #answer { background: #eaf9ea; padding: 15px; border-left: 4px solid #28a745; display: none; }
+    button { padding: 10px 16px; border: none; border-radius: 6px; cursor: pointer; margin-right: 10px; }
+    .btn-question { background: #0077cc; color: #fff; }
+    .btn-answer { background: #28a745; color: #fff; }
+    .fanu.box{
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      margin:  auto;
+      max-width:auto;
+      max-height: auto;
+    }
+    .meri  {
+      font-size: 16px; 
+      color: #7f8c8d;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .cont {
+display: flex; flex-wrap: wrap; justify-content: center;
+width: 80%;
+height: 60%;
+background-color: rgb(211, 191, 16);
+border-radius: 20px;
+    }
+    .defi.text{
+      font-size: 2rem;
+      color: rgb(0, 23, 233);
+      line-height: 2;
+    }
+    .title{
+      align-items: center;
+      text-align: center;
+      font-size: 2.5rem;
+      color: #202bc9c7;
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+
+    
+    h1 { text-align: center; }
+    .container { display: flex; flex-wrap: wrap; justify-content: center; }
+
+    .element-card {
+      width: 200px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .symbol { font-size: 2rem; font-weight: bold; color: #0077cc; }
+    .name { font-size: 1.2rem; margin-top: 4px; }
+    .details { font-size: 0.9rem; margin-top: 6px; }
+    body {
+  background-image: url("https://i.pinimg.com/736x/78/fa/8e/78fa8e61b17bd1b353597a60c259eb8a.jpg");
+  background-size: cover;       
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
+.yoha{
+ font-size:35px;
+ font-family:'Times New Roman', Times, serif;
+ color:#0077cc;
+ justify-content: left;
+}
+.bento-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+
+.bento-grid-container > div {
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    color: white;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.bento1 {
+    background-image: url(''); 
+    background-position: center;
+    background-color: rgba(155, 148, 148, 0.45); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 665px;
+    height: 400px;
+}
+
+.bento2 {
+    background-image: url();
+    background-color: #28a745;
+    grid-column: span 1;
+    grid-row: span 2;
+    height:400px;
+    width:300px;
+}
+.bento3 {
+    background-image:url() ;
+    background-color: #0056b3;
+    grid-column: span 1;
+    grid-row: span 1;
+    height:350px;
+    width:300px;
+}
+.bento4 {
+    background-image: url();
+    background-color: #dc3545;
+    grid-column: span 1;
+    grid-row: span 1;
+     height:350px;
+    width:300px;
+}
+.bento5 {
+    background-image: url();
+    background-color: #111111;
+    grid-column: span 1;
+    grid-row: span 1;
+     height:350px;
+    width:300px;
+}
+acc{
+border-radius:12px;
+color : rgb(87, 81, 81) ;
+width :100px;
+height: 50px;
+text-align: center;
+}
+  </style>
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="tab" onclick="showPage('table')">Periodic Table</div>
+  <div class="tab" onclick="showPage('definition')">Definition</div>
+  <div class="tab active" onclick="showPage('questions')">Question Page</div>
+</div>
+<div id = "definition" class ="page" >
+
+<h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:25px;">More Education Books About Cellular Biology:</h1>
+    <section class="bento-grid-container">
+        <div style="font-size:24px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" class="bento1">Essential Cell Biology</div>
+        <div style="font-size:24px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"class="bento2">Molecular Biology of the Cell </div>
+        <div style="font-size:22px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"class="bento3">Cell and Molecular Biology: Concepts and Experiments </div>
+        <div style="font-size:25px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"class="bento4">Cell Biology</div>
+        <div style="font-size:23px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"class="bento5">The Cell: A Molecular Approach</div>
+       </section>
+                                                                   
+
+</div>
+
+
+
+<div id="table" class="page">
+  <h1 clas="acc"style=" font-weight:bold;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:25px;"> Periodic Table   118 Elements</h1>
+  <div class="container">
+    
+<div class="element-card"><div class="symbol">H</div><div class="name">Hydrogen</div><div class="details">Atomic Number: 1<br>Group: 1<br>Period: 1</div></div>
+<div class="element-card"><div class="symbol">He</div><div class="name">Helium</div><div class="details">Atomic Number: 2<br>Group: 18<br>Period: 1</div></div>
+<div class="element-card"><div class="symbol">Li</div><div class="name">Lithium</div><div class="details">Atomic Number: 3<br>Group: 1<br>Period: 2</div></div>
+<div class="element-card"><div class="symbol">Be</div><div class="name">Beryllium</div><div class="details">Atomic Number: 4<br>Group: 2<br>Period: 2</div></div>
+<div class="element-card">
+
+
+<div class="symbol">B</div><div class="name">Boron</div><div class="details">Atomic Number: 5<br>Group: 13<br>Period: 2</div></div>
+<div class="element-card"><div class="symbol">C</div><div class="name">Carbon</div><div class="details">Atomic Number: 6<br>Group: 14<br>Period: 2</div></div>
+<div class="element-card"><div class="symbol">N</div><div class="name">Nitrogen</div><div class="details">Atomic Number: 7<br>Group: 15<br>Period: 2</div></div>
+<div class="element-card"><div class="symbol">O</div><div class="name">Oxygen</div><div class="details">Atomic Number: 8<br>Group: 16<br>Period: 2</div></div>
+<div class="element-card"><div class="symbol">F</div><div class="name">Fluorine</div><div class="details">Atomic Number: 9<br>Group: 17<br>Period: 2</div></div>
+<div class="element-card"><div class="symbol">Ne</div><div class="name">Neon</div><div class="details">Atomic Number: 10<br>Group: 18<br>Period: 2</div></div>
+
+<div class="element-card"><div class="symbol">Na</div><div class="name">Sodium</div><div class="details">Atomic Number: 11<br>Group: 1<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">Mg</div><div class="name">Magnesium</div><div class="details">Atomic Number: 12<br>Group: 2<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">Al</div><div class="name">Aluminum</div><div class="details">Atomic Number: 13<br>Group: 13<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">Si</div><div class="name">Silicon</div><div class="details">Atomic Number: 14<br>Group: 14<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">P</div><div class="name">Phosphorus</div><div class="details">Atomic Number: 15<br>Group: 15<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">S</div><div class="name">Sulfur</div><div class="details">Atomic Number: 16<br>Group: 16<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">Cl</div><div class="name">Chlorine</div><div class="details">Atomic Number: 17<br>Group: 17<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">Ar</div><div class="name">Argon</div><div class="details">Atomic Number: 18<br>Group: 18<br>Period: 3</div></div>
+<div class="element-card"><div class="symbol">K</div><div class="name">Potassium</div><div class="details">Atomic Number: 19<br>Group: 1<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Ca</div><div class="name">Calcium</div><div class="details">Atomic Number: 20<br>Group: 2<br>Period: 4</div></div>
+   
+
+
+
+
+
+
+
+
+
+
+<div class="element-card"><div class="symbol">Sc</div><div class="name">Scandium</div><div class="details">Atomic Number: 21<br>Group: 3<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Ti</div><div class="name">Titanium</div><div class="details">Atomic Number: 22<br>Group: 4<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">V</div><div class="name">Vanadium</div><div class="details">Atomic Number: 23<br>Group: 5<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Cr</div><div class="name">Chromium</div><div class="details">Atomic Number: 24<br>Group: 6<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Mn</div><div class="name">Manganese</div><div class="details">Atomic Number: 25<br>Group: 7<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Fe</div><div class="name">Iron</div><div class="details">Atomic Number: 26<br>Group: 8<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Co</div><div class="name">Cobalt</div><div class="details">Atomic Number: 27<br>Group: 9<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Ni</div><div class="name">Nickel</div><div class="details">Atomic Number: 28<br>Group: 10<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Cu</div><div class="name">Copper</div><div class="details">Atomic Number: 29<br>Group: 11<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Zn</div><div class="name">Zinc</div><div class="details">Atomic Number: 30<br>Group: 12<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Ga</div><div class="name">Gallium</div><div class="details">Atomic Number: 31<br>Group: 13<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Ge</div><div class="name">Germanium</div><div class="details">Atomic Number: 32<br>Group: 14<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">As</div><div class="name">Arsenic</div><div class="details">Atomic Number: 33<br>Group: 15<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Se</div><div class="name">Selenium</div><div class="details">Atomic Number: 34<br>Group: 16<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Br</div><div class="name">Bromine</div><div class="details">Atomic Number: 35<br>Group: 17<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Kr</div><div class="name">Krypton</div><div class="details">Atomic Number: 36<br>Group: 18<br>Period: 4</div></div>
+<div class="element-card"><div class="symbol">Rb</div><div class="name">Rubidium</div><div class="details">Atomic Number: 37<br>Group: 1<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Sr</div><div class="name">Strontium</div><div class="details">Atomic Number: 38<br>Group: 2<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Y</div><div class="name">Yttrium</div><div class="details">Atomic Number: 39<br>Group: 3<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Zr</div><div class="name">Zirconium</div><div class="details">Atomic Number: 40<br>Group: 4<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Nb</div><div class="name">Niobium</div><div class="details">Atomic Number: 41<br>Group: 5<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Mo</div><div class="name">Molybdenum</div><div class="details">Atomic Number: 42<br>Group: 6<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Ru</div><div class="name">Ruthenium</div><div class="details">Atomic Number: 44<br>Group: 8<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Rh</div><div class="name">Rhodium</div><div class="details">Atomic Number: 45<br>Group: 9<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Pd</div><div class="name">Palladium</div><div class="details">Atomic Number: 46<br>Group: 10<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Ag</div><div class="name">Silver</div><div class="details">Atomic Number: 47<br>Group: 11<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Cd</div><div class="name">Cadmium</div><div class="details">Atomic Number: 48<br>Group: 12<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">In</div><div class="name">Indium</div><div class="details">Atomic Number: 49<br>Group: 13<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Sn</div><div class="name">Tin</div><div class="details">Atomic Number: 50<br>Group: 14<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Sb</div><div class="name">Antimony</div><div class="details">Atomic Number: 51<br>Group: 15<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Te</div><div class="name">Tellurium</div><div class="details">Atomic Number: 52<br>Group: 16<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">I</div><div class="name">Iodine</div><div class="details">Atomic Number: 53<br>Group: 17<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Xe</div><div class="name">Xenon</div><div class="details">Atomic Number: 54<br>Group: 18<br>Period: 5</div></div>
+<div class="element-card"><div class="symbol">Cs</div><div class="name">Cesium</div><div class="details">Atomic Number: 55<br>Group: 1<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Ba</div><div class="name">Barium</div><div class="details">Atomic Number: 56<br>Group: 2<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">La</div><div class="name">Lanthanum</div><div class="details">Atomic Number: 57<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Ce</div><div class="name">Cerium</div><div class="details">Atomic Number: 58<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Pr</div><div class="name">Praseodymium</div><div class="details">Atomic Number: 59<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Nd</div><div class="name">Neodymium</div><div class="details">Atomic Number: 60<br>Group: 3<br>Period: 6</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="element-card"><div class="symbol">Pm</div><div class="name">Promethium</div><div class="details">Atomic Number: 61<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Sm</div><div class="name">Samarium</div><div class="details">Atomic Number: 62<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Eu</div><div class="name">Europium</div><div class="details">Atomic Number: 63<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Gd</div><div class="name">Gadolinium</div><div class="details">Atomic Number: 64<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Tb</div><div class="name">Terbium</div><div class="details">Atomic Number: 65<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Dy</div><div class="name">Dysprosium</div><div class="details">Atomic Number: 66<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Ho</div><div class="name">Holmium</div><div class="details">Atomic Number: 67<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Er</div><div class="name">Erbium</div><div class="details">Atomic Number: 68<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Tm</div><div class="name">Thulium</div><div class="details">Atomic Number: 69<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Yb</div><div class="name">Ytterbium</div><div class="details">Atomic Number: 70<br>Group: 3<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Lu</div><div class="name">Lutetium</div><div class="details">Atomic Number: 71<br>Group: 3<br>Period: 6</div></div>
+
+<div class="element-card"><div class="symbol">Hf</div><div class="name">Hafnium</div><div class="details">Atomic Number: 72<br>Group: 4<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Ta</div><div class="name">Tantalum</div><div class="details">Atomic Number: 73<br>Group: 5<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">W</div><div class="name">Tungsten</div><div class="details">Atomic Number: 74<br>Group: 6<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Re</div><div class="name">Rhenium</div><div class="details">Atomic Number: 75<br>Group: 7<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Os</div><div class="name">Osmium</div><div class="details">Atomic Number: 76<br>Group: 8<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Ir</div><div class="name">Iridium</div><div class="details">Atomic Number: 77<br>Group: 9<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Pt</div><div class="name">Platinum</div><div class="details">Atomic Number: 78<br>Group: 10<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Au</div><div class="name">Gold</div><div class="details">Atomic Number: 79<br>Group: 11<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Hg</div><div class="name">Mercury</div><div class="details">Atomic Number: 80<br>Group: 12<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Tl</div><div class="name">Thallium</div><div class="details">Atomic Number: 81<br>Group: 13<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Pb</div><div class="name">Lead</div><div class="details">Atomic Number: 82<br>Group: 14<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Bi</div><div class="name">Bismuth</div><div class="details">Atomic Number: 83<br>Group: 15<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Po</div><div class="name">Polonium</div><div class="details">Atomic Number: 84<br>Group: 16<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">At</div><div class="name">Astatine</div><div class="details">Atomic Number: 85<br>Group: 17<br>Period: 6</div></div>
+<div class="element-card"><div class="symbol">Rn</div><div class="name">Radon</div><div class="details">Atomic Number: 86<br>Group: 18<br>Period: 6</div></div>
+
+<div class="element-card"><div class="symbol">Fr</div><div class="name">Francium</div><div class="details">Atomic Number: 87<br>Group: 1<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Ra</div><div class="name">Radium</div><div class="details">Atomic Number: 88<br>Group: 2<br>Period: 7</div></div>
+
+<div class="element-card"><div class="symbol">Ac</div><div class="name">Actinium</div><div class="details">Atomic Number: 89<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Th</div><div class="name">Thorium</div><div class="details">Atomic Number: 90<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Pa</div><div class="name">Protactinium</div><div class="details">Atomic Number: 91<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">U</div><div class="name">Uranium</div><div class="details">Atomic Number: 92<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Np</div><div class="name">Neptunium</div><div class="details">Atomic Number: 93<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Pu</div><div class="name">Plutonium</div><div class="details">Atomic Number: 94<br>Group: 3<br>Period: 7</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="element-card"><div class="symbol">Am</div><div class="name">Americium</div><div class="details">Atomic Number: 95<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Cm</div><div class="name">Curium</div><div class="details">Atomic Number: 96<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Bk</div><div class="name">Berkelium</div><div class="details">Atomic Number: 97<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Cf</div><div class="name">Californium</div><div class="details">Atomic Number: 98<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Es</div><div class="name">Einsteinium</div><div class="details">Atomic Number: 99<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Fm</div><div class="name">Fermium</div><div class="details">Atomic Number: 100<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Md</div><div class="name">Mendelevium</div><div class="details">Atomic Number: 101<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">No</div><div class="name">Nobelium</div><div class="details">Atomic Number: 102<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Lr</div><div class="name">Lawrencium</div><div class="details">Atomic Number: 103<br>Group: 3<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Rf</div><div class="name">Rutherfordium</div><div class="details">Atomic Number: 104<br>Group: 4<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Db</div><div class="name">Dubnium</div><div class="details">Atomic Number: 105<br>Group: 5<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Sg</div><div class="name">Seaborgium</div><div class="details">Atomic Number: 106<br>Group: 6<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Bh</div><div class="name">Bohrium</div><div class="details">Atomic Number: 107<br>Group: 7<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Hs</div><div class="name">Hassium</div><div class="details">Atomic Number: 108<br>Group: 8<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Mt</div><div class="name">Meitnerium</div><div class="details">Atomic Number: 109<br>Group: 9<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Ds</div><div class="name">Darmstadtium</div><div class="details">Atomic Number: 110<br>Group: 10<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Rg</div><div class="name">Roentgenium</div><div class="details">Atomic Number: 111<br>Group: 11<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Cn</div><div class="name">Copernicium</div><div class="details">Atomic Number: 112<br>Group: 12<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Nh</div><div class="name">Nihonium</div><div class="details">Atomic Number: 113<br>Group: 13<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Fl</div><div class="name">Flerovium</div><div class="details">Atomic Number: 114<br>Group: 14<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Mc</div><div class="name">Moscovium</div><div class="details">Atomic Number: 115<br>Group: 15<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Lv</div><div class="name">Livermorium</div><div class="details">Atomic Number: 116<br>Group: 16<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Ts</div><div class="name">Tennessine</div><div class="details">Atomic Number: 117<br>Group: 17<br>Period: 7</div></div>
+<div class="element-card"><div class="symbol">Og</div><div class="name">Oganesson</div><div class="details">Atomic Number: 118<br>Group: 18<br>Period: 7</div></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="questions" class="page active">
+  <div class="question-box">
+    <div id="question">Click Next Question to start</div>
+    <div id="answer"></div>
+    <button class="btn-question" onclick="nextQuestion()">Next Question</button>
+    <button class="btn-answer" onclick="showAnswer()">Show Answer</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+const quiz = [
+  { q: 'What is the Valence Number of Oxygen?', a: 'Oxygen has valence 2' },/*1ST QUESTION*/
+  { q: 'Which element has atomic number 26?', a: 'Iron (Fe)' },/*2 QUESTION*/
+  { q: 'Which element has atomic number 15?', a: 'Phosphurus (P)' },/*3 QUESTION*/
+  { q: 'Which element has Symbol (Hg)?', a: 'Mercury' },/*4 QUESTION*/
+  { q: 'What is the Valence Number of Magnesium?', a: 'Magnesium has Valence of 2' },/*5 QUESTION*/
+  { q: 'Which element has a variable valence(2,3)?', a: 'Iron (Fe)' },/*6 QUESTION*/
+  { q: 'Which element has Symbol(Sc)?', a: 'Scandium' },/*7 QUESTION*/
+  { q: 'Which element has atomic number 6?', a: 'Carbon' },/*8 QUESTION*/
+  { q: 'Which element has atomic number 11?', a: 'Sodium' },/*9 QUESTION*/
+  { q: 'What Element has Symbol,(Zn)?', a: 'Zinc' },/*10 QUESTION*/
+  { q: 'What is the Valence Number of Hydrogen?', a: 'Hydrogen has 1 Valence' },/*11 QUESTION*/
+  { q: 'Which element has Symbol, (Se)?', a: 'Selemium' },/*12 QUESTION*/
+  { q: 'Which element has atomic number 20?', a: 'Calcium' },/*13 QUESTION*/
+  { q: 'What is Valence Number of Almunium ?', a: 'Almunium has 3 Valence' },/*14 QUESTION*/
+  { q: 'What is the Definition behind Valence?', a: 'Electron&ION' },/*15 QUESTION*/
+  { q: 'These are monovalent Elements which can not mix under easy condition(conclusively) ?', a: 'Noble gas' },/*16 QUESTION*/
+  { q: 'What is the Symbol of F?', a: 'Flourine' },/*17 QUESTION*/
+  { q: 'Which element  Shares the same property with Iron(Fe)?', a: 'Copper(Cu) 1 or 2' },/*18 QUESTION*/
+  { q: 'Which elemnt has the Symbol(U)?', a: 'Uranium' },/*19 QUESTION*/
+  { q: 'What is the use of SuperScript?', a: 'To write(show) a ION charges' },/*20 QUESTION*/
+];
+let index = -1;
+
+
+
+
+
+
+
+
+function nextQuestion() {
+  index = (index + 1) % quiz.length;
+  document.getElementById('question').innerText = quiz[index].q;
+  document.getElementById('answer').style.display = 'none';
+}
+function showAnswer() {
+  if (index >= 0) {
+    const ans = document.getElementById('answer');
+    ans.innerText = quiz[index].a;
+    ans.style.display = 'block';
+  }
+}
+</script>
+</body>
+</html>
