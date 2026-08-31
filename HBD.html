@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+      --letter-love: 130px;
+      --letter: #ffffff;
+      --bg-color: #0f051d;
+      --accent-color: #ff4081;
+}
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      background-color: var(--bg-color);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: #fff;
+}
+
+    
+.background-sparkles {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 64, 129, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(156, 39, 176, 0.15) 0%, transparent 40%);
+      z-index: 0;
+}
+
+.card-container {
+      position: relative;
+      width: 380px;
+      height: 480px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      z-index: 1;
+      overflow: hidden;
+}
+
+    
+.cake-wrapper {
+      position: relative;
+      width: 180px;
+      height: 140px;
+      margin-top: 30px;
+}
+
+.plate {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160px;
+      height: 12px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.layer-bottom {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 40px;
+      background: #6d4c41;
+      border-radius: 8px 8px 0 0;
+}
+
+.layer-middle {
+      position: absolute;
+      bottom: 52px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 10px;
+      background: #f8bbd0;
+}
+
+.layer-top {
+      position: absolute;
+      bottom: 62px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 35px;
+      background: #ff80ab;
+      border-radius: 8px 8px 0 0;
+}
+
+.icing {
+      position: absolute;
+      bottom: 85px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 15px;
+      background: #ffffff;
+      border-radius: 10px 10px 5px 5px;
+}
+
+.candle {
+      position: absolute;
+      bottom: 97px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 35px;
+      background: linear-gradient(to right, #e91e63, #ff80ab);
+      border-radius: 3px;
+}
+
+.flame {
+      position: absolute;
+      bottom: 134px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 20px;
+      background: #ffeb3b;
+      border-radius: 50% 50% 20% 20%;
+      box-shadow: 0 0 15px #ff9800, 0 0 25px #ff5722;
+      animation: flicker 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes flicker {
+      0% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 0.9; }
+      100% { transform: translateX(-50%) scale(1.15) rotate(2deg); opacity: 1; }
+}
+
+   
+.Para_Ti {
+      position: absolute;
+      width: 90%;
+      height: var(--letter-love);
+      transform: translateX(-50%);
+      background: var(--letter);
+      
+      
+      left: 50%;
+      bottom: 25px;
+      border-radius: 15px;
+      color: #d81b60;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #ffffff 0%, #ffe4e8 100%);
+}
+
+.typing-text,
+.typing-text-2 {
+      font-family: "Dancing Script", cursive, "Te Amo";
+      font-size: 1.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #d81b60;
+      width: 0;
+    }
+
+.typing-text {
+      animation: typing 2.5s steps(22) forwards, blink 0.7s 4;
+    }
+
+.typing-text-2 {
+      animation: typing 2.5s steps(20) 3s forwards, blink 0.7s 3s infinite;
+    }
+
+@keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+@keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-sparkles"></div>
+
+  <div class="card-container">
+    <div class="cake-wrapper">
+      <div class="flame"></div>
+      <div class="candle"></div>
+      <div class="icing"></div>
+      <div class="layer-top"></div>
+      <div class="layer-middle"></div>
+      <div class="layer-bottom"></div>
+      <div class="plate"></div>
+    </div>
+
+    <div class="Para_Ti">
+      <div class="typing-text">Happy Birthday ROBEL ❤️</div>
+      <div class="typing-text-2">Wish You The Best🤩</div>
+    </div>
+  </div>
+
+</body>
+</html>
